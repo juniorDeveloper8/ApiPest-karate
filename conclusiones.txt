@@ -1,30 +1,34 @@
-CONCLUSIONES DEL EJERCICIO DE PRUEBAS DE APIs - PETSTORE
+Conclusiones del Ejercicio de Pruebas de APIs – PetStore
 
-Durante la automatización del flujo de gestión de mascotas en la API de PetStore, se identificaron los siguientes hallazgos:
+Durante la automatización del flujo de gestión de mascotas en la API pública de PetStore, ejecuté distintos escenarios que cubren operaciones CRUD básicas.
+A continuación, detallo los principales hallazgos:
 
-1. Añadir una mascota:
-   - La solicitud POST fue exitosa con código HTTP 200.
-   - Se validó que los datos enviados (ID, nombre, categoría, estatus) se reflejan correctamente en la respuesta.
+1. Añadir una mascota
+   La solicitud POST /pet fue procesada correctamente, devolviendo un código HTTP 200.
+   Validé que los datos enviados (ID, nombre, categoría y estatus) se reflejaron de forma precisa en la respuesta.
 
-2. Consulta por ID:
-   - La solicitud GET devolvió la mascota previamente creada.
-   - Se confirmó que el ID, nombre y estatus coinciden con los datos originales.
+2. Consulta por ID
+   Al realizar la solicitud GET /pet/{id}, obtuve la mascota previamente creada.
+   Confirmé que el ID, nombre y estatus coincidían con los datos originales, lo que demuestra consistencia en la persistencia de información.
 
-3. Actualización de mascota:
-   - La solicitud PUT permitió modificar el nombre y estatus de la mascota.
-   - La respuesta reflejó correctamente los nuevos valores ("Max", "sold").
+3. Actualización de mascota
+   Utilicé la solicitud PUT /pet para modificar el nombre y estatus de la mascota.
+   La respuesta reflejó correctamente los nuevos valores ("Max", "sold"), validando que el servicio permite actualizaciones efectivas.
 
-4. Consulta por estatus:
-   - La solicitud GET con parámetro status="sold" devolvió una lista que incluye la mascota actualizada.
-   - Se validó que el ID y nombre coinciden con los datos modificados.
+4. Consulta por estatus
+   Al consultar con GET /pet/findByStatus?status=sold, recibí una lista que incluía la mascota actualizada.
+   Verifiqué que el ID y nombre coincidían con los datos modificados, confirmando que el filtro por estatus funciona correctamente.
 
-OBSERVACIONES TÉCNICAS:
+🧪 Observaciones técnicas
+- Karate me permitió estructurar las pruebas REST de forma clara, modular y reutilizable.
 
-- Karate permite estructurar pruebas REST de forma clara y concisa, integrando validaciones, variables y reutilización de datos.
-- El uso de `match`, `def` y `path` facilita la captura y comparación de respuestas.
-- Los reportes generados en HTML ofrecen trazabilidad visual de cada paso ejecutado.
-- La ejecución desde un runner con tags permite controlar qué escenarios se ejecutan.
+- El uso de instrucciones como match, def y path facilitó la validación de respuestas y la captura de datos dinámicos.
 
-RESUMEN:
+- Los reportes HTML generados ofrecen trazabilidad visual completa de cada paso ejecutado.
 
-El ejercicio demostró que la API de PetStore responde correctamente ante operaciones CRUD básicas. La automatización con Karate permitió validar entradas, salidas y comportamiento esperado en cada caso. El proyecto está listo para ser reproducido, extendido y evaluado por terceros.
+- La ejecución mediante un runner con etiquetas permitió controlar qué escenarios se ejecutaban, optimizando el flujo de pruebas.
+
+✅ Resumen final
+Este ejercicio demostró que la API de PetStore responde correctamente ante operaciones CRUD básicas.
+La automatización con Karate me permitió validar entradas, salidas y comportamiento esperado en cada caso.
+El proyecto quedó listo para ser reproducido, extendido y evaluado por otros desarrolladores o equipos de QA.

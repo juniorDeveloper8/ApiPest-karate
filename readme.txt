@@ -1,38 +1,42 @@
-EJERCICIO DE PRUEBAS DE SERVICIOS REST - PETSTORE API
+README - Pruebas de Servicios REST con Karate
 
-Este proyecto automatiza el flujo completo de gestión de mascotas utilizando el framework Karate.
+📌 Descripción del proyecto:
+Este proyecto automatiza el flujo completo de gestión de mascotas utilizando el framework Karate, aplicando pruebas sobre la API pública Petstore.
+Los escenarios cubren operaciones CRUD básicas para validar el comportamiento del servicio REST.
 
-REQUISITOS PREVIOS:
-1. Tener instalado Java 21
-2. Tener configurado Maven
+🛠 Requisitos previos:
+1. Java 21 instalado y configurado
+2. Maven configurado en el sistema
 3. IDE recomendado: IntelliJ IDEA
-4. Acceso a internet para descargar dependencias
+4. Conexión a internet para descargar dependencias
 
-ESTRUCTURA DEL PROYECTO:
-- src/test/java: contiene el runner de Karate
-- src/test/resources: contiene el archivo CrudApiPets.feature con los escenarios de prueba
-- target/karate-reports: carpeta donde se generan los reportes HTML
+📁 Estructura del proyecto:
+- src/test/java: contiene el runner de Karate (PetsRunner.java)
+- src/test/resources: contiene el archivo de pruebas CrudApiPets.feature
+- target/karate-reports: carpeta donde se generan los reportes HTML al finalizar la ejecución
 
-PASOS DE EJECUCIÓN:
+🚀 Pasos para ejecutar las pruebas:
 
 1. Clonar el repositorio desde GitHub
 2. Abrir el proyecto en IntelliJ IDEA
-3. Verificar que el archivo CrudApiPets.feature se encuentra en src/test/resources
-4. Ejecutar el archivo PetsRunner.java ubicado en src/test/java/org.sofka
-   - Este runner ejecuta los escenarios etiquetados con @TestPets
-5. Al finalizar la ejecución, abrir el reporte en:
-   target/karate-reports/karate-summary.html
+3. Verificar que el archivo `CrudApiPets.feature` se encuentra en `src/test/resources`
+4. Ejecutar el archivo `PetsRunner.java` ubicado en `src/test/java/org/sofka`
+   - Este runner ejecuta los escenarios etiquetados con `@TestPets`
+5. Al finalizar la ejecución, abrir el reporte HTML en:
+   `target/karate-reports/karate-summary.html`
 
-ESCENARIOS AUTOMATIZADOS:
+🧪 Escenarios automatizados:
 
-- Añadir una mascota a la tienda (POST /pet)
-- Consultar la mascota por ID (GET /pet/{id})
-- Actualizar el nombre y estatus de la mascota (PUT /pet)
-- Consultar mascotas por estatus (GET /pet/findByStatus)
+- Crear una mascota en la tienda (POST /pet)
+- Consultar una mascota por ID (GET /pet/{id})
+- Actualizar nombre y estado de una mascota (PUT /pet)
+- Consultar mascotas por estado (GET /pet/findByStatus)
 
-Cada escenario valida:
-- Entradas enviadas en formato JSON
-- Código de respuesta HTTP
+✅ Cada escenario valida:
+- Formato y contenido de las entradas (JSON)
+- Código de respuesta HTTP esperado
 - Contenido del cuerpo de respuesta
-- Variables utilizadas para capturar y reutilizar datos
+- Uso de variables para capturar y reutilizar datos entre pasos
 
+📄 Autor:
+Este proyecto fue desarrollado como parte de un ejercicio técnico de automatización de servicios REST utilizando Karate.

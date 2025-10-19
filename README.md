@@ -31,7 +31,7 @@ TestApiPets/
 │   └── test/
 │       ├── java/
 │       │   └── sofka/
-│       │       └── PetsRunner.java      → Clasepara ejecutar las pruebas
+│       │       └── PetsRunner.java      → Clase para ejecutar las pruebas
 │       └── resources/
 │           └── ApiPets.feature          
 ├── .gitignore                   
